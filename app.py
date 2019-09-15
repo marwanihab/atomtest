@@ -22,7 +22,7 @@ def notes():
         session["notes"].append(note)
 
     if request.method == "POST":
-        note = request.form.get("note")
+        note = request.form.get("notez")
         session["notes"].append(note)
 
     return render_template("route.html", notes=session["notes"])
