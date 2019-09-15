@@ -17,7 +17,7 @@ Session(app)
 
 @app.route("/notes", methods=["GET,POST"])
 def notes():
-    if session.get("notes") == []:
+    if session.get("notess") == []:
         note = request.form.get("note")
         session["notes"].append(note)
 
