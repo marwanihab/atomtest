@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, session
 app = Flask(__name__)
+
+
 @app.route("/<string:name>")
 def customHello(name):
     return ""
@@ -18,7 +20,7 @@ Session(app)
 @app.route("/notes", methods=["GET,POST"])
 def notes():
     if session.get("notess") == []:
-        note = request.form.get("note")
+        note = request.form.get("notezz")
         session["notes"].append(note)
 
     if request.method == "POST":
